@@ -1,0 +1,42 @@
+package _Self.buildTypes
+
+import jetbrains.buildServer.configs.kotlin.*
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
+import jetbrains.buildServer.configs.kotlin.triggers.finishBuildTrigger
+
+object Build_2 : BuildType({
+    name = "Build_stage2"
+
+    artifactRules = "./Lesson6/*.sh => relese_ver_%build.counter%.zip"
+    publishArtifacts = PublishMode.SUCCESSFUL
+
+    vcs {
+        root(HttpsGithubComKirillqq20CourseRefsHeadsMain)
+    }
+
+    steps {
+        script {
+            name = "Step1"
+            scriptContent = "bash ./Lesson6/script_task1.sh"
+        }
+        script {
+            name = "Step2"
+            scriptContent = "bash ./Lesson6/script_task2.sh"
+        }
+        script {
+            name = "Step3"
+            scriptContent = "bash ./Lesson6/script_task3.sh"
+        }
+        script {
+            name = "Step4"
+            scriptContent = "bash ./Lesson6/script_task4.sh"
+        }
+    }
+
+    triggers {
+        finishBuildTrigger {
+            buildType = "${Build.id}"
+            successfulOnly = true
+        }
+    }
+})

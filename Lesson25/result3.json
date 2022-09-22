@@ -1,0 +1,163 @@
+{
+    "_id" : ObjectId("52cdef7d4bab8bd6752989dc"),
+    "name" : "Supercool School",
+    "permalink" : "supercool-school",
+    "crunchbase_url" : "http://www.crunchbase.com/company/supercool-school",
+    "homepage_url" : "http://www.supercoolschool.com",
+    "blog_url" : "http://supercoolschool.typepad.com/blog/",
+    "blog_feed_url" : "http://supercoolschool.typepad.com/blog/index.rdf",
+    "twitter_username" : "SupercoolSchool",
+    "category_code" : "web",
+    "number_of_employees" : NumberInt(3),
+    "founded_year" : NumberInt(2009),
+    "founded_month" : null,
+    "founded_day" : null,
+    "deadpooled_year" : NumberInt(2012),
+    "deadpooled_month" : NumberInt(8),
+    "deadpooled_day" : NumberInt(13),
+    "deadpooled_url" : "",
+    "tag_list" : "interactive-learning, web-based-schooling, web-classes",
+    "alias_list" : "",
+    "email_address" : "contact@supercoolschool.com",
+    "phone_number" : "415-7947719",
+    "description" : "Start your online School",
+    "created_at" : "Wed May 07 18:30:39 UTC 2008",
+    "updated_at" : "Tue Oct 15 12:00:12 UTC 2013",
+    "overview" : "<p>Supercool School allows individuals and organizations to build their next generation online school. Think Ning meets Webex for learning. The aim is to do for education what blogging has done for publishing - democratize and decentralize it!</p>\n\n<p>The backend allows users to create, customize and administer their school and the front end lets users create profiles, browse through classes, create class requests and participate in live online classrooms. </p>\n\n<p>There are many usecases for this: in the end consumer space people can create language learning schools, test-prep schools or cooking schools. In the enterprise space companies can use an internal Supercool School to allow employees to teach each other or use it to empower their customers to share knowledge in a more social way.</p>\n\n<p>Global education luminaries like Howard Rheingold, Tony Bates and Maggie Johnson are advisers of Supercool School.</p>\n\n<p>Companies like Daimler Chrysler, BP, Redhat and Oracle are currently interested in launching their own internal Supercool Schools.</p>\n\n<p>End Consumer Schools have been launched for categories like entrepreneurship, education, tutoring, home schooling, philosophy &amp; language learning.</p>\n\n<p>See examples at: http://startup.supercoolschool.com &amp; http://educators.supercoolschool.com</p>",
+    "image" : {
+        "available_sizes" : [
+            [
+                [
+                    NumberInt(150),
+                    NumberInt(137)
+                ],
+                "assets/images/resized/0001/8113/18113v1-max-150x150.jpg"
+            ],
+            [
+                [
+                    NumberInt(150),
+                    NumberInt(137)
+                ],
+                "assets/images/resized/0001/8113/18113v1-max-250x250.jpg"
+            ],
+            [
+                [
+                    NumberInt(150),
+                    NumberInt(137)
+                ],
+                "assets/images/resized/0001/8113/18113v1-max-450x450.jpg"
+            ]
+        ],
+        "attribution" : null
+    },
+    "products" : [
+
+    ],
+    "relationships" : [
+        {
+            "is_past" : true,
+            "title" : "CTO",
+            "person" : {
+                "first_name" : "Vladimir",
+                "last_name" : "Gurgov",
+                "permalink" : "vladimir-gurgov"
+            }
+        },
+        {
+            "is_past" : true,
+            "title" : "Principal",
+            "person" : {
+                "first_name" : "Bjoern Lasse",
+                "last_name" : "Herrmann",
+                "permalink" : "bjoern-lasse-herman"
+            }
+        }
+    ],
+    "competitions" : [
+
+    ],
+    "providerships" : [
+
+    ],
+    "total_money_raised" : "$100k",
+    "funding_rounds" : [
+        {
+            "id" : NumberInt(9690),
+            "round_code" : "angel",
+            "source_url" : "",
+            "source_description" : "",
+            "raised_amount" : NumberInt(100000),
+            "raised_currency_code" : "USD",
+            "funded_year" : NumberInt(2008),
+            "funded_month" : NumberInt(1),
+            "funded_day" : NumberInt(1),
+            "investments" : [
+
+            ]
+        }
+    ],
+    "investments" : [
+
+    ],
+    "acquisition" : null,
+    "acquisitions" : [
+
+    ],
+    "offices" : [
+        {
+            "description" : null,
+            "address1" : "1176 South Van Ness Avenue",
+            "address2" : "Suite B",
+            "zip_code" : "94110",
+            "city" : "San Francisco",
+            "state_code" : "CA",
+            "country_code" : "USA",
+            "latitude" : 37.754332,
+            "longitude" : -122.416804
+        }
+    ],
+    "milestones" : [
+
+    ],
+    "ipo" : null,
+    "video_embeds" : [
+
+    ],
+    "screenshots" : [
+        {
+            "available_sizes" : [
+                [
+                    [
+                        NumberInt(150),
+                        NumberInt(106)
+                    ],
+                    "assets/images/resized/0006/7176/67176v2-max-150x150.png"
+                ],
+                [
+                    [
+                        NumberInt(250),
+                        NumberInt(177)
+                    ],
+                    "assets/images/resized/0006/7176/67176v2-max-250x250.png"
+                ],
+                [
+                    [
+                        NumberInt(450),
+                        NumberInt(318)
+                    ],
+                    "assets/images/resized/0006/7176/67176v2-max-450x450.png"
+                ]
+            ],
+            "attribution" : null
+        }
+    ],
+    "external_links" : [
+        {
+            "external_url" : "http://www.edukwest.com/bjoern-lasse-herrmann-and-steli-efti-of-supercool-school/",
+            "title" : "Bjoern Lasse Herrmann and Steli Efti of Supercool School"
+        }
+    ],
+    "partners" : [
+
+    ]
+}

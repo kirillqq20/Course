@@ -1,0 +1,90 @@
+Name:               ip-10-0-1-174.eu-central-1.compute.internal
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/instance-type=t2.micro
+                    beta.kubernetes.io/os=linux
+                    eks.amazonaws.com/capacityType=ON_DEMAND
+                    eks.amazonaws.com/nodegroup=node-group-1-20220916202130093600000011
+                    eks.amazonaws.com/nodegroup-image=ami-068d000e86e5d6a81
+                    eks.amazonaws.com/sourceLaunchTemplateId=lt-0985987e6d4d5c35b
+                    eks.amazonaws.com/sourceLaunchTemplateVersion=1
+                    failure-domain.beta.kubernetes.io/region=eu-central-1
+                    failure-domain.beta.kubernetes.io/zone=eu-central-1a
+                    k8s.io/cloud-provider-aws=92f569dff27ac735465bdd06fd70ef1f
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=ip-10-0-1-174.eu-central-1.compute.internal
+                    kubernetes.io/os=linux
+                    node.kubernetes.io/instance-type=t2.micro
+                    topology.kubernetes.io/region=eu-central-1
+                    topology.kubernetes.io/zone=eu-central-1a
+Annotations:        node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Fri, 16 Sep 2022 20:22:52 +0000
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  ip-10-0-1-174.eu-central-1.compute.internal
+  AcquireTime:     <unset>
+  RenewTime:       Fri, 16 Sep 2022 20:32:54 +0000
+Conditions:
+  Type             Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----             ------  -----------------                 ------------------                ------                       -------
+  MemoryPressure   False   Fri, 16 Sep 2022 20:28:23 +0000   Fri, 16 Sep 2022 20:22:52 +0000   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure     False   Fri, 16 Sep 2022 20:28:23 +0000   Fri, 16 Sep 2022 20:22:52 +0000   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure      False   Fri, 16 Sep 2022 20:28:23 +0000   Fri, 16 Sep 2022 20:22:52 +0000   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready            True    Fri, 16 Sep 2022 20:28:23 +0000   Fri, 16 Sep 2022 20:23:22 +0000   KubeletReady                 kubelet is posting ready status
+Addresses:
+  InternalIP:   10.0.1.174
+  Hostname:     ip-10-0-1-174.eu-central-1.compute.internal
+  InternalDNS:  ip-10-0-1-174.eu-central-1.compute.internal
+Capacity:
+  attachable-volumes-aws-ebs:  39
+  cpu:                         1
+  ephemeral-storage:           20959212Ki
+  hugepages-2Mi:               0
+  memory:                      997880Ki
+  pods:                        4
+Allocatable:
+  attachable-volumes-aws-ebs:  39
+  cpu:                         940m
+  ephemeral-storage:           18242267924
+  hugepages-2Mi:               0
+  memory:                      589304Ki
+  pods:                        4
+System Info:
+  Machine ID:                 6c24c7bf233f4f71980174834f7a32ba
+  System UUID:                ec2c9311-9278-2f28-69db-0052059aa70d
+  Boot ID:                    2f519b16-ccdf-4969-86cb-ea25aecb679d
+  Kernel Version:             5.4.209-116.363.amzn2.x86_64
+  OS Image:                   Amazon Linux 2
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  docker://20.10.17
+  Kubelet Version:            v1.22.12-eks-ba74326
+  Kube-Proxy Version:         v1.22.12-eks-ba74326
+ProviderID:                   aws:///eu-central-1a/i-06a7ffe51fd20c86e
+Non-terminated Pods:          (2 in total)
+  Namespace                   Name                CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                ------------  ----------  ---------------  -------------  ---
+  kube-system                 aws-node-n4tdp      25m (2%)      0 (0%)      0 (0%)           0 (0%)         10m
+  kube-system                 kube-proxy-7zhlg    100m (10%)    0 (0%)      0 (0%)           0 (0%)         10m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource                    Requests    Limits
+  --------                    --------    ------
+  cpu                         125m (13%)  0 (0%)
+  memory                      0 (0%)      0 (0%)
+  ephemeral-storage           0 (0%)      0 (0%)
+  hugepages-2Mi               0 (0%)      0 (0%)
+  attachable-volumes-aws-ebs  0           0
+Events:
+  Type    Reason                   Age                From             Message
+  ----    ------                   ----               ----             -------
+  Normal  Starting                 10m                kube-proxy
+  Normal  RegisteredNode           10m                node-controller  Node ip-10-0-1-174.eu-central-1.compute.internal event: Registered Node ip-10-0-1-174.eu-central-1.compute.internal in Controller
+  Normal  Starting                 10m                kubelet          Starting kubelet.
+  Normal  NodeHasSufficientMemory  10m (x2 over 10m)  kubelet          Node ip-10-0-1-174.eu-central-1.compute.internal status is now: NodeHasSufficientMemory
+  Normal  NodeHasNoDiskPressure    10m (x2 over 10m)  kubelet          Node ip-10-0-1-174.eu-central-1.compute.internal status is now: NodeHasNoDiskPressure
+  Normal  NodeHasSufficientPID     10m (x2 over 10m)  kubelet          Node ip-10-0-1-174.eu-central-1.compute.internal status is now: NodeHasSufficientPID
+  Normal  NodeAllocatableEnforced  10m                kubelet          Updated Node Allocatable limit across pods
+  Normal  NodeReady                9m40s              kubelet          Node ip-10-0-1-174.eu-central-1.compute.internal status is now: NodeReady

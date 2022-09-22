@@ -1,0 +1,886 @@
+Name:                 aws-node-9zqpl
+Namespace:            kube-system
+Priority:             2000001000
+Priority Class Name:  system-node-critical
+Service Account:      aws-node
+Node:                 ip-10-0-3-61.eu-central-1.compute.internal/10.0.3.61
+Start Time:           Fri, 16 Sep 2022 20:22:43 +0000
+Labels:               controller-revision-hash=594b55976
+                      k8s-app=aws-node
+                      pod-template-generation=1
+Annotations:          kubernetes.io/psp: eks.privileged
+Status:               Running
+IP:                   10.0.3.61
+IPs:
+  IP:           10.0.3.61
+Controlled By:  DaemonSet/aws-node
+Init Containers:
+  aws-vpc-cni-init:
+    Container ID:   docker://b0320692ef4da44b0a8781becf2841797e7374acc24bfe8baddb8f82d15771e7
+    Image:          602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni-init:v1.10.1-eksbuild.1
+    Image ID:       docker-pullable://602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni-init@sha256:6c70af7bf257712105a89a896b2afb86c86ace865d32eb73765bf29163a08c56
+    Port:           <none>
+    Host Port:      <none>
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Fri, 16 Sep 2022 20:22:58 +0000
+      Finished:     Fri, 16 Sep 2022 20:22:58 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:
+      DISABLE_TCP_EARLY_DEMUX:  false
+      ENABLE_IPv6:              false
+    Mounts:
+      /host/opt/cni/bin from cni-bin-dir (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-bcljp (ro)
+Containers:
+  aws-node:
+    Container ID:   docker://8d8acdf23066d0fbd1ac1731b12379e00fe4d346455f9b944aa96bae131d2cf2
+    Image:          602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni:v1.10.1-eksbuild.1
+    Image ID:       docker-pullable://602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni@sha256:3b6db8b6fb23424366ef91d7e9e818e42291316fa81c00c2c75dcafa614340c5
+    Port:           61678/TCP
+    Host Port:      61678/TCP
+    State:          Running
+      Started:      Fri, 16 Sep 2022 20:23:03 +0000
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:      25m
+    Liveness:   exec [/app/grpc-health-probe -addr=:50051 -connect-timeout=5s -rpc-timeout=5s] delay=60s timeout=10s period=10s #success=1 #failure=3
+    Readiness:  exec [/app/grpc-health-probe -addr=:50051 -connect-timeout=5s -rpc-timeout=5s] delay=1s timeout=10s period=10s #success=1 #failure=3
+    Environment:
+      ADDITIONAL_ENI_TAGS:                    {}
+      AWS_VPC_CNI_NODE_PORT_SUPPORT:          true
+      AWS_VPC_ENI_MTU:                        9001
+      AWS_VPC_K8S_CNI_CONFIGURE_RPFILTER:     false
+      AWS_VPC_K8S_CNI_CUSTOM_NETWORK_CFG:     false
+      AWS_VPC_K8S_CNI_EXTERNALSNAT:           false
+      AWS_VPC_K8S_CNI_LOGLEVEL:               DEBUG
+      AWS_VPC_K8S_CNI_LOG_FILE:               /host/var/log/aws-routed-eni/ipamd.log
+      AWS_VPC_K8S_CNI_RANDOMIZESNAT:          prng
+      AWS_VPC_K8S_CNI_VETHPREFIX:             eni
+      AWS_VPC_K8S_PLUGIN_LOG_FILE:            /var/log/aws-routed-eni/plugin.log
+      AWS_VPC_K8S_PLUGIN_LOG_LEVEL:           DEBUG
+      DISABLE_INTROSPECTION:                  false
+      DISABLE_METRICS:                        false
+      DISABLE_NETWORK_RESOURCE_PROVISIONING:  false
+      ENABLE_IPv4:                            true
+      ENABLE_IPv6:                            false
+      ENABLE_POD_ENI:                         false
+      ENABLE_PREFIX_DELEGATION:               false
+      MY_NODE_NAME:                            (v1:spec.nodeName)
+      WARM_ENI_TARGET:                        1
+      WARM_PREFIX_TARGET:                     1
+    Mounts:
+      /host/etc/cni/net.d from cni-net-dir (rw)
+      /host/opt/cni/bin from cni-bin-dir (rw)
+      /host/var/log/aws-routed-eni from log-dir (rw)
+      /run/xtables.lock from xtables-lock (rw)
+      /var/run/aws-node from run-dir (rw)
+      /var/run/dockershim.sock from dockershim (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-bcljp (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  cni-bin-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /opt/cni/bin
+    HostPathType:
+  cni-net-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/cni/net.d
+    HostPathType:
+  dockershim:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/run/dockershim.sock
+    HostPathType:
+  xtables-lock:
+    Type:          HostPath (bare host directory volume)
+    Path:          /run/xtables.lock
+    HostPathType:
+  log-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/log/aws-routed-eni
+    HostPathType:  DirectoryOrCreate
+  run-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/run/aws-node
+    HostPathType:  DirectoryOrCreate
+  kube-api-access-bcljp:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 op=Exists
+                             node.kubernetes.io/disk-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/network-unavailable:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists
+                             node.kubernetes.io/pid-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/unreachable:NoExecute op=Exists
+                             node.kubernetes.io/unschedulable:NoSchedule op=Exists
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  20m   default-scheduler  Successfully assigned kube-system/aws-node-9zqpl to ip-10-0-3-61.eu-central-1.compute.internal
+  Normal  Pulling    20m   kubelet            Pulling image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni-init:v1.10.1-eksbuild.1"
+  Normal  Pulled     19m   kubelet            Successfully pulled image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni-init:v1.10.1-eksbuild.1" in 12.849193962s
+  Normal  Created    19m   kubelet            Created container aws-vpc-cni-init
+  Normal  Started    19m   kubelet            Started container aws-vpc-cni-init
+  Normal  Pulling    19m   kubelet            Pulling image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni:v1.10.1-eksbuild.1"
+  Normal  Pulled     19m   kubelet            Successfully pulled image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni:v1.10.1-eksbuild.1" in 3.44013973s
+  Normal  Created    19m   kubelet            Created container aws-node
+  Normal  Started    19m   kubelet            Started container aws-node
+
+
+Name:                 aws-node-jzs6k
+Namespace:            kube-system
+Priority:             2000001000
+Priority Class Name:  system-node-critical
+Service Account:      aws-node
+Node:                 ip-10-0-3-232.eu-central-1.compute.internal/10.0.3.232
+Start Time:           Fri, 16 Sep 2022 20:23:41 +0000
+Labels:               controller-revision-hash=594b55976
+                      k8s-app=aws-node
+                      pod-template-generation=1
+Annotations:          kubernetes.io/psp: eks.privileged
+Status:               Running
+IP:                   10.0.3.232
+IPs:
+  IP:           10.0.3.232
+Controlled By:  DaemonSet/aws-node
+Init Containers:
+  aws-vpc-cni-init:
+    Container ID:   docker://aa0fff687a4b16d57e999944ea4f42efe1e240420ced25b3f0822647a82bc04f
+    Image:          602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni-init:v1.10.1-eksbuild.1
+    Image ID:       docker-pullable://602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni-init@sha256:6c70af7bf257712105a89a896b2afb86c86ace865d32eb73765bf29163a08c56
+    Port:           <none>
+    Host Port:      <none>
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Fri, 16 Sep 2022 20:23:55 +0000
+      Finished:     Fri, 16 Sep 2022 20:23:55 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:
+      DISABLE_TCP_EARLY_DEMUX:  false
+      ENABLE_IPv6:              false
+    Mounts:
+      /host/opt/cni/bin from cni-bin-dir (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-pr8sb (ro)
+Containers:
+  aws-node:
+    Container ID:   docker://0096a83f7bbf82f12dd8459fbf7e4fc5bceb144cd489a426a29d3e456a9ed774
+    Image:          602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni:v1.10.1-eksbuild.1
+    Image ID:       docker-pullable://602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni@sha256:3b6db8b6fb23424366ef91d7e9e818e42291316fa81c00c2c75dcafa614340c5
+    Port:           61678/TCP
+    Host Port:      61678/TCP
+    State:          Running
+      Started:      Fri, 16 Sep 2022 20:23:59 +0000
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:      25m
+    Liveness:   exec [/app/grpc-health-probe -addr=:50051 -connect-timeout=5s -rpc-timeout=5s] delay=60s timeout=10s period=10s #success=1 #failure=3
+    Readiness:  exec [/app/grpc-health-probe -addr=:50051 -connect-timeout=5s -rpc-timeout=5s] delay=1s timeout=10s period=10s #success=1 #failure=3
+    Environment:
+      ADDITIONAL_ENI_TAGS:                    {}
+      AWS_VPC_CNI_NODE_PORT_SUPPORT:          true
+      AWS_VPC_ENI_MTU:                        9001
+      AWS_VPC_K8S_CNI_CONFIGURE_RPFILTER:     false
+      AWS_VPC_K8S_CNI_CUSTOM_NETWORK_CFG:     false
+      AWS_VPC_K8S_CNI_EXTERNALSNAT:           false
+      AWS_VPC_K8S_CNI_LOGLEVEL:               DEBUG
+      AWS_VPC_K8S_CNI_LOG_FILE:               /host/var/log/aws-routed-eni/ipamd.log
+      AWS_VPC_K8S_CNI_RANDOMIZESNAT:          prng
+      AWS_VPC_K8S_CNI_VETHPREFIX:             eni
+      AWS_VPC_K8S_PLUGIN_LOG_FILE:            /var/log/aws-routed-eni/plugin.log
+      AWS_VPC_K8S_PLUGIN_LOG_LEVEL:           DEBUG
+      DISABLE_INTROSPECTION:                  false
+      DISABLE_METRICS:                        false
+      DISABLE_NETWORK_RESOURCE_PROVISIONING:  false
+      ENABLE_IPv4:                            true
+      ENABLE_IPv6:                            false
+      ENABLE_POD_ENI:                         false
+      ENABLE_PREFIX_DELEGATION:               false
+      MY_NODE_NAME:                            (v1:spec.nodeName)
+      WARM_ENI_TARGET:                        1
+      WARM_PREFIX_TARGET:                     1
+    Mounts:
+      /host/etc/cni/net.d from cni-net-dir (rw)
+      /host/opt/cni/bin from cni-bin-dir (rw)
+      /host/var/log/aws-routed-eni from log-dir (rw)
+      /run/xtables.lock from xtables-lock (rw)
+      /var/run/aws-node from run-dir (rw)
+      /var/run/dockershim.sock from dockershim (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-pr8sb (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  cni-bin-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /opt/cni/bin
+    HostPathType:
+  cni-net-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/cni/net.d
+    HostPathType:
+  dockershim:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/run/dockershim.sock
+    HostPathType:
+  xtables-lock:
+    Type:          HostPath (bare host directory volume)
+    Path:          /run/xtables.lock
+    HostPathType:
+  log-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/log/aws-routed-eni
+    HostPathType:  DirectoryOrCreate
+  run-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/run/aws-node
+    HostPathType:  DirectoryOrCreate
+  kube-api-access-pr8sb:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 op=Exists
+                             node.kubernetes.io/disk-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/network-unavailable:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists
+                             node.kubernetes.io/pid-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/unreachable:NoExecute op=Exists
+                             node.kubernetes.io/unschedulable:NoSchedule op=Exists
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  19m   default-scheduler  Successfully assigned kube-system/aws-node-jzs6k to ip-10-0-3-232.eu-central-1.compute.internal
+  Normal  Pulling    19m   kubelet            Pulling image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni-init:v1.10.1-eksbuild.1"
+  Normal  Pulled     18m   kubelet            Successfully pulled image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni-init:v1.10.1-eksbuild.1" in 12.672215564s
+  Normal  Created    18m   kubelet            Created container aws-vpc-cni-init
+  Normal  Started    18m   kubelet            Started container aws-vpc-cni-init
+  Normal  Pulling    18m   kubelet            Pulling image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni:v1.10.1-eksbuild.1"
+  Normal  Pulled     18m   kubelet            Successfully pulled image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni:v1.10.1-eksbuild.1" in 3.334539916s
+  Normal  Created    18m   kubelet            Created container aws-node
+  Normal  Started    18m   kubelet            Started container aws-node
+
+
+Name:                 aws-node-n4tdp
+Namespace:            kube-system
+Priority:             2000001000
+Priority Class Name:  system-node-critical
+Service Account:      aws-node
+Node:                 ip-10-0-1-174.eu-central-1.compute.internal/10.0.1.174
+Start Time:           Fri, 16 Sep 2022 20:22:53 +0000
+Labels:               controller-revision-hash=594b55976
+                      k8s-app=aws-node
+                      pod-template-generation=1
+Annotations:          kubernetes.io/psp: eks.privileged
+Status:               Running
+IP:                   10.0.1.174
+IPs:
+  IP:           10.0.1.174
+Controlled By:  DaemonSet/aws-node
+Init Containers:
+  aws-vpc-cni-init:
+    Container ID:   docker://5af21c908c9ce4d6e747513d36070b690c6b0c7d0280be4aff67811a67a8ee05
+    Image:          602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni-init:v1.10.1-eksbuild.1
+    Image ID:       docker-pullable://602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni-init@sha256:6c70af7bf257712105a89a896b2afb86c86ace865d32eb73765bf29163a08c56
+    Port:           <none>
+    Host Port:      <none>
+    State:          Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Fri, 16 Sep 2022 20:23:08 +0000
+      Finished:     Fri, 16 Sep 2022 20:23:08 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:
+      DISABLE_TCP_EARLY_DEMUX:  false
+      ENABLE_IPv6:              false
+    Mounts:
+      /host/opt/cni/bin from cni-bin-dir (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-2c4ww (ro)
+Containers:
+  aws-node:
+    Container ID:   docker://8db90ee44ba6a61492333a8a36f1227c3fb5dd6dcbe5fe9fcb5d95849430b20b
+    Image:          602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni:v1.10.1-eksbuild.1
+    Image ID:       docker-pullable://602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni@sha256:3b6db8b6fb23424366ef91d7e9e818e42291316fa81c00c2c75dcafa614340c5
+    Port:           61678/TCP
+    Host Port:      61678/TCP
+    State:          Running
+      Started:      Fri, 16 Sep 2022 20:23:12 +0000
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:      25m
+    Liveness:   exec [/app/grpc-health-probe -addr=:50051 -connect-timeout=5s -rpc-timeout=5s] delay=60s timeout=10s period=10s #success=1 #failure=3
+    Readiness:  exec [/app/grpc-health-probe -addr=:50051 -connect-timeout=5s -rpc-timeout=5s] delay=1s timeout=10s period=10s #success=1 #failure=3
+    Environment:
+      ADDITIONAL_ENI_TAGS:                    {}
+      AWS_VPC_CNI_NODE_PORT_SUPPORT:          true
+      AWS_VPC_ENI_MTU:                        9001
+      AWS_VPC_K8S_CNI_CONFIGURE_RPFILTER:     false
+      AWS_VPC_K8S_CNI_CUSTOM_NETWORK_CFG:     false
+      AWS_VPC_K8S_CNI_EXTERNALSNAT:           false
+      AWS_VPC_K8S_CNI_LOGLEVEL:               DEBUG
+      AWS_VPC_K8S_CNI_LOG_FILE:               /host/var/log/aws-routed-eni/ipamd.log
+      AWS_VPC_K8S_CNI_RANDOMIZESNAT:          prng
+      AWS_VPC_K8S_CNI_VETHPREFIX:             eni
+      AWS_VPC_K8S_PLUGIN_LOG_FILE:            /var/log/aws-routed-eni/plugin.log
+      AWS_VPC_K8S_PLUGIN_LOG_LEVEL:           DEBUG
+      DISABLE_INTROSPECTION:                  false
+      DISABLE_METRICS:                        false
+      DISABLE_NETWORK_RESOURCE_PROVISIONING:  false
+      ENABLE_IPv4:                            true
+      ENABLE_IPv6:                            false
+      ENABLE_POD_ENI:                         false
+      ENABLE_PREFIX_DELEGATION:               false
+      MY_NODE_NAME:                            (v1:spec.nodeName)
+      WARM_ENI_TARGET:                        1
+      WARM_PREFIX_TARGET:                     1
+    Mounts:
+      /host/etc/cni/net.d from cni-net-dir (rw)
+      /host/opt/cni/bin from cni-bin-dir (rw)
+      /host/var/log/aws-routed-eni from log-dir (rw)
+      /run/xtables.lock from xtables-lock (rw)
+      /var/run/aws-node from run-dir (rw)
+      /var/run/dockershim.sock from dockershim (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-2c4ww (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  cni-bin-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /opt/cni/bin
+    HostPathType:
+  cni-net-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /etc/cni/net.d
+    HostPathType:
+  dockershim:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/run/dockershim.sock
+    HostPathType:
+  xtables-lock:
+    Type:          HostPath (bare host directory volume)
+    Path:          /run/xtables.lock
+    HostPathType:
+  log-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/log/aws-routed-eni
+    HostPathType:  DirectoryOrCreate
+  run-dir:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/run/aws-node
+    HostPathType:  DirectoryOrCreate
+  kube-api-access-2c4ww:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 op=Exists
+                             node.kubernetes.io/disk-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/network-unavailable:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists
+                             node.kubernetes.io/pid-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/unreachable:NoExecute op=Exists
+                             node.kubernetes.io/unschedulable:NoSchedule op=Exists
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  19m   default-scheduler  Successfully assigned kube-system/aws-node-n4tdp to ip-10-0-1-174.eu-central-1.compute.internal
+  Normal  Pulling    19m   kubelet            Pulling image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni-init:v1.10.1-eksbuild.1"
+  Normal  Pulled     19m   kubelet            Successfully pulled image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni-init:v1.10.1-eksbuild.1" in 12.763521906s
+  Normal  Created    19m   kubelet            Created container aws-vpc-cni-init
+  Normal  Started    19m   kubelet            Started container aws-vpc-cni-init
+  Normal  Pulling    19m   kubelet            Pulling image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni:v1.10.1-eksbuild.1"
+  Normal  Pulled     19m   kubelet            Successfully pulled image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/amazon-k8s-cni:v1.10.1-eksbuild.1" in 3.363989762s
+  Normal  Created    19m   kubelet            Created container aws-node
+  Normal  Started    19m   kubelet            Started container aws-node
+
+
+Name:                 coredns-78666889b9-75dgr
+Namespace:            kube-system
+Priority:             2000000000
+Priority Class Name:  system-cluster-critical
+Service Account:      coredns
+Node:                 ip-10-0-3-61.eu-central-1.compute.internal/10.0.3.61
+Start Time:           Fri, 16 Sep 2022 20:23:13 +0000
+Labels:               eks.amazonaws.com/component=coredns
+                      k8s-app=kube-dns
+                      pod-template-hash=78666889b9
+Annotations:          eks.amazonaws.com/compute-type: ec2
+                      kubernetes.io/psp: eks.privileged
+Status:               Running
+IP:                   10.0.3.139
+IPs:
+  IP:           10.0.3.139
+Controlled By:  ReplicaSet/coredns-78666889b9
+Containers:
+  coredns:
+    Container ID:  docker://7f431f8cf8c47a9dc91370a3688fb2c39879d9d250ac76555afaad3e1c74ff0c
+    Image:         602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/coredns:v1.8.7-eksbuild.1
+    Image ID:      docker-pullable://602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/coredns@sha256:09c4a9684cc63dc17565b656b57797498b4a5d5e10f4286ce5ad6ff7435d7f3d
+    Ports:         53/UDP, 53/TCP, 9153/TCP
+    Host Ports:    0/UDP, 0/TCP, 0/TCP
+    Args:
+      -conf
+      /etc/coredns/Corefile
+    State:          Running
+      Started:      Fri, 16 Sep 2022 20:23:47 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      memory:  170Mi
+    Requests:
+      cpu:        100m
+      memory:     70Mi
+    Liveness:     http-get http://:8080/health delay=60s timeout=5s period=10s #success=1 #failure=5
+    Readiness:    http-get http://:8080/health delay=0s timeout=1s period=10s #success=1 #failure=3
+    Environment:  <none>
+    Mounts:
+      /etc/coredns from config-volume (ro)
+      /tmp from tmp (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-75hkp (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  tmp:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:
+    SizeLimit:  <unset>
+  config-volume:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      coredns
+    Optional:  false
+  kube-api-access-75hkp:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 CriticalAddonsOnly op=Exists
+                             node-role.kubernetes.io/master:NoSchedule
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason                  Age                 From               Message
+  ----     ------                  ----                ----               -------
+  Warning  FailedScheduling        21m (x5 over 25m)   default-scheduler  no nodes available to schedule pods
+  Warning  FailedScheduling        20m                 default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.
+  Normal   Scheduled               19m                 default-scheduler  Successfully assigned kube-system/coredns-78666889b9-75dgr to ip-10-0-3-61.eu-central-1.compute.internal
+  Warning  FailedCreatePodSandBox  19m                 kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to set up sandbox container "afbd0fe43f016d94d09fd75147025ea306c51252dbeac37e152e0c0db375e4c5" network for pod "coredns-78666889b9-75dgr": networkPlugin cni failed to set up pod "coredns-78666889b9-75dgr_kube-system" network: add cmd: failed to assign an IP address to container
+  Warning  FailedCreatePodSandBox  19m                 kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to set up sandbox container "71d30a8de31212151043c463d29f2843510953be53a415604f065c5d9586439e" network for pod "coredns-78666889b9-75dgr": networkPlugin cni failed to set up pod "coredns-78666889b9-75dgr_kube-system" network: add cmd: failed to assign an IP address to container
+  Warning  FailedCreatePodSandBox  19m                 kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to set up sandbox container "28a237ba37be20eb50d225365c6d101bf176163e0449f8b083202c1a4242705f" network for pod "coredns-78666889b9-75dgr": networkPlugin cni failed to set up pod "coredns-78666889b9-75dgr_kube-system" network: add cmd: failed to assign an IP address to container
+  Warning  FailedCreatePodSandBox  19m                 kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to set up sandbox container "518f52079fe8056f02bf952f6ac93d5460631c64257babe3c1e590e075e5790c" network for pod "coredns-78666889b9-75dgr": networkPlugin cni failed to set up pod "coredns-78666889b9-75dgr_kube-system" network: add cmd: failed to assign an IP address to container
+  Warning  FailedCreatePodSandBox  19m                 kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to set up sandbox container "9de6788bf5e6d43c141ac21e14f715f7332e7e59fc91803386f024fd3157c84c" network for pod "coredns-78666889b9-75dgr": networkPlugin cni failed to set up pod "coredns-78666889b9-75dgr_kube-system" network: add cmd: failed to assign an IP address to container
+  Warning  FailedCreatePodSandBox  19m                 kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to set up sandbox container "7ec3d4f2631c7589c32c540875f7aae191f27f3b1a89e3925b8e206bcc5c5b11" network for pod "coredns-78666889b9-75dgr": networkPlugin cni failed to set up pod "coredns-78666889b9-75dgr_kube-system" network: add cmd: failed to assign an IP address to container
+  Warning  FailedCreatePodSandBox  19m                 kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to set up sandbox container "ccbce5f30a6cca1d283c64781b14b0083a3640958cc5652314d287ab2ba471f5" network for pod "coredns-78666889b9-75dgr": networkPlugin cni failed to set up pod "coredns-78666889b9-75dgr_kube-system" network: add cmd: failed to assign an IP address to container
+  Warning  FailedCreatePodSandBox  19m                 kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to set up sandbox container "d178996f7a2c80a2fa789ee368add8a53ba7ae7cadbbf189c71aa6ce8fabe44c" network for pod "coredns-78666889b9-75dgr": networkPlugin cni failed to set up pod "coredns-78666889b9-75dgr_kube-system" network: add cmd: failed to assign an IP address to container
+  Warning  FailedCreatePodSandBox  19m                 kubelet            Failed to create pod sandbox: rpc error: code = Unknown desc = failed to set up sandbox container "4eedd91b4930c6cf9956a37cb2f02e6a54c47cb4837f6f861c86fa2bfd4d882b" network for pod "coredns-78666889b9-75dgr": networkPlugin cni failed to set up pod "coredns-78666889b9-75dgr_kube-system" network: add cmd: failed to assign an IP address to container
+  Normal   SandboxChanged          19m (x12 over 19m)  kubelet            Pod sandbox changed, it will be killed and re-created.
+  Warning  FailedCreatePodSandBox  19m (x4 over 19m)   kubelet            (combined from similar events): Failed to create pod sandbox: rpc error: code = Unknown desc = failed to set up sandbox container "d254656a577256f61e3a450cf29384d27a86d62f8dcb5110af3d3b921a75a903" network for pod "coredns-78666889b9-75dgr": networkPlugin cni failed to set up pod "coredns-78666889b9-75dgr_kube-system" network: add cmd: failed to assign an IP address to container
+
+
+Name:                 coredns-78666889b9-snfgg
+Namespace:            kube-system
+Priority:             2000000000
+Priority Class Name:  system-cluster-critical
+Service Account:      coredns
+Node:                 ip-10-0-3-61.eu-central-1.compute.internal/10.0.3.61
+Start Time:           Fri, 16 Sep 2022 20:23:13 +0000
+Labels:               eks.amazonaws.com/component=coredns
+                      k8s-app=kube-dns
+                      pod-template-hash=78666889b9
+Annotations:          eks.amazonaws.com/compute-type: ec2
+                      kubernetes.io/psp: eks.privileged
+Status:               Running
+IP:                   10.0.3.131
+IPs:
+  IP:           10.0.3.131
+Controlled By:  ReplicaSet/coredns-78666889b9
+Containers:
+  coredns:
+    Container ID:  docker://3e7cd742b8632527fe08e5cbdea03f0ec0769455a8a97d57bd7f14df42faeded
+    Image:         602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/coredns:v1.8.7-eksbuild.1
+    Image ID:      docker-pullable://602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/coredns@sha256:09c4a9684cc63dc17565b656b57797498b4a5d5e10f4286ce5ad6ff7435d7f3d
+    Ports:         53/UDP, 53/TCP, 9153/TCP
+    Host Ports:    0/UDP, 0/TCP, 0/TCP
+    Args:
+      -conf
+      /etc/coredns/Corefile
+    State:          Running
+      Started:      Fri, 16 Sep 2022 20:23:16 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      memory:  170Mi
+    Requests:
+      cpu:        100m
+      memory:     70Mi
+    Liveness:     http-get http://:8080/health delay=60s timeout=5s period=10s #success=1 #failure=5
+    Readiness:    http-get http://:8080/health delay=0s timeout=1s period=10s #success=1 #failure=3
+    Environment:  <none>
+    Mounts:
+      /etc/coredns from config-volume (ro)
+      /tmp from tmp (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-6vhg9 (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  tmp:
+    Type:       EmptyDir (a temporary directory that shares a pod's lifetime)
+    Medium:
+    SizeLimit:  <unset>
+  config-volume:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      coredns
+    Optional:  false
+  kube-api-access-6vhg9:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 CriticalAddonsOnly op=Exists
+                             node-role.kubernetes.io/master:NoSchedule
+                             node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason            Age                From               Message
+  ----     ------            ----               ----               -------
+  Warning  FailedScheduling  21m (x5 over 25m)  default-scheduler  no nodes available to schedule pods
+  Warning  FailedScheduling  20m                default-scheduler  0/1 nodes are available: 1 node(s) had taint {node.kubernetes.io/not-ready: }, that the pod didn't tolerate.
+  Normal   Scheduled         19m                default-scheduler  Successfully assigned kube-system/coredns-78666889b9-snfgg to ip-10-0-3-61.eu-central-1.compute.internal
+  Normal   Pulling           19m                kubelet            Pulling image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/coredns:v1.8.7-eksbuild.1"
+  Normal   Pulled            19m                kubelet            Successfully pulled image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/coredns:v1.8.7-eksbuild.1" in 1.512984168s
+  Normal   Created           19m                kubelet            Created container coredns
+  Normal   Started           19m                kubelet            Started container coredns
+
+
+Name:                 kube-proxy-45zj6
+Namespace:            kube-system
+Priority:             2000001000
+Priority Class Name:  system-node-critical
+Service Account:      kube-proxy
+Node:                 ip-10-0-3-232.eu-central-1.compute.internal/10.0.3.232
+Start Time:           Fri, 16 Sep 2022 20:23:41 +0000
+Labels:               controller-revision-hash=745b94b796
+                      k8s-app=kube-proxy
+                      pod-template-generation=1
+Annotations:          kubernetes.io/psp: eks.privileged
+Status:               Running
+IP:                   10.0.3.232
+IPs:
+  IP:           10.0.3.232
+Controlled By:  DaemonSet/kube-proxy
+Containers:
+  kube-proxy:
+    Container ID:  docker://8c293452e727a90bb4b0edef3b7bcc9234ae98f05ef5276116e4bfe8e8ec790a
+    Image:         602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/kube-proxy:v1.22.6-eksbuild.1
+    Image ID:      docker-pullable://602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/kube-proxy@sha256:c8abb4b8efc94090458f34e5f456791d9f7f57b5c99517b6b4e197305c1f10f6
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      kube-proxy
+      --v=2
+      --config=/var/lib/kube-proxy-config/config
+      --hostname-override=$(NODE_NAME)
+    State:          Running
+      Started:      Fri, 16 Sep 2022 20:23:50 +0000
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:  100m
+    Environment:
+      NODE_NAME:   (v1:spec.nodeName)
+    Mounts:
+      /lib/modules from lib-modules (ro)
+      /run/xtables.lock from xtables-lock (rw)
+      /var/lib/kube-proxy-config/ from config (rw)
+      /var/lib/kube-proxy/ from kubeconfig (rw)
+      /var/log from varlog (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-79zsq (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  varlog:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/log
+    HostPathType:
+  xtables-lock:
+    Type:          HostPath (bare host directory volume)
+    Path:          /run/xtables.lock
+    HostPathType:  FileOrCreate
+  lib-modules:
+    Type:          HostPath (bare host directory volume)
+    Path:          /lib/modules
+    HostPathType:
+  kubeconfig:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      kube-proxy
+    Optional:  false
+  config:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      kube-proxy-config
+    Optional:  false
+  kube-api-access-79zsq:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 op=Exists
+                             node.kubernetes.io/disk-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/network-unavailable:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists
+                             node.kubernetes.io/pid-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/unreachable:NoExecute op=Exists
+                             node.kubernetes.io/unschedulable:NoSchedule op=Exists
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  19m   default-scheduler  Successfully assigned kube-system/kube-proxy-45zj6 to ip-10-0-3-232.eu-central-1.compute.internal
+  Normal  Pulling    19m   kubelet            Pulling image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/kube-proxy:v1.22.6-eksbuild.1"
+  Normal  Pulled     19m   kubelet            Successfully pulled image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/kube-proxy:v1.22.6-eksbuild.1" in 6.745199235s
+  Normal  Created    19m   kubelet            Created container kube-proxy
+  Normal  Started    18m   kubelet            Started container kube-proxy
+
+
+Name:                 kube-proxy-7zhlg
+Namespace:            kube-system
+Priority:             2000001000
+Priority Class Name:  system-node-critical
+Service Account:      kube-proxy
+Node:                 ip-10-0-1-174.eu-central-1.compute.internal/10.0.1.174
+Start Time:           Fri, 16 Sep 2022 20:22:53 +0000
+Labels:               controller-revision-hash=745b94b796
+                      k8s-app=kube-proxy
+                      pod-template-generation=1
+Annotations:          kubernetes.io/psp: eks.privileged
+Status:               Running
+IP:                   10.0.1.174
+IPs:
+  IP:           10.0.1.174
+Controlled By:  DaemonSet/kube-proxy
+Containers:
+  kube-proxy:
+    Container ID:  docker://9b13cd3b59cdb351848573a79d7f8d00d2ebba0f043a7b6c620b65b092261f1f
+    Image:         602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/kube-proxy:v1.22.6-eksbuild.1
+    Image ID:      docker-pullable://602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/kube-proxy@sha256:c8abb4b8efc94090458f34e5f456791d9f7f57b5c99517b6b4e197305c1f10f6
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      kube-proxy
+      --v=2
+      --config=/var/lib/kube-proxy-config/config
+      --hostname-override=$(NODE_NAME)
+    State:          Running
+      Started:      Fri, 16 Sep 2022 20:23:02 +0000
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:  100m
+    Environment:
+      NODE_NAME:   (v1:spec.nodeName)
+    Mounts:
+      /lib/modules from lib-modules (ro)
+      /run/xtables.lock from xtables-lock (rw)
+      /var/lib/kube-proxy-config/ from config (rw)
+      /var/lib/kube-proxy/ from kubeconfig (rw)
+      /var/log from varlog (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-wmbn4 (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  varlog:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/log
+    HostPathType:
+  xtables-lock:
+    Type:          HostPath (bare host directory volume)
+    Path:          /run/xtables.lock
+    HostPathType:  FileOrCreate
+  lib-modules:
+    Type:          HostPath (bare host directory volume)
+    Path:          /lib/modules
+    HostPathType:
+  kubeconfig:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      kube-proxy
+    Optional:  false
+  config:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      kube-proxy-config
+    Optional:  false
+  kube-api-access-wmbn4:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 op=Exists
+                             node.kubernetes.io/disk-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/network-unavailable:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists
+                             node.kubernetes.io/pid-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/unreachable:NoExecute op=Exists
+                             node.kubernetes.io/unschedulable:NoSchedule op=Exists
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  19m   default-scheduler  Successfully assigned kube-system/kube-proxy-7zhlg to ip-10-0-1-174.eu-central-1.compute.internal
+  Normal  Pulling    19m   kubelet            Pulling image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/kube-proxy:v1.22.6-eksbuild.1"
+  Normal  Pulled     19m   kubelet            Successfully pulled image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/kube-proxy:v1.22.6-eksbuild.1" in 6.56890153s
+  Normal  Created    19m   kubelet            Created container kube-proxy
+  Normal  Started    19m   kubelet            Started container kube-proxy
+
+
+Name:                 kube-proxy-j59xd
+Namespace:            kube-system
+Priority:             2000001000
+Priority Class Name:  system-node-critical
+Service Account:      kube-proxy
+Node:                 ip-10-0-3-61.eu-central-1.compute.internal/10.0.3.61
+Start Time:           Fri, 16 Sep 2022 20:22:43 +0000
+Labels:               controller-revision-hash=745b94b796
+                      k8s-app=kube-proxy
+                      pod-template-generation=1
+Annotations:          kubernetes.io/psp: eks.privileged
+Status:               Running
+IP:                   10.0.3.61
+IPs:
+  IP:           10.0.3.61
+Controlled By:  DaemonSet/kube-proxy
+Containers:
+  kube-proxy:
+    Container ID:  docker://f0952b751085741ef426ece636bdf5d57fdb0224a543c167f948530d82c33538
+    Image:         602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/kube-proxy:v1.22.6-eksbuild.1
+    Image ID:      docker-pullable://602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/kube-proxy@sha256:c8abb4b8efc94090458f34e5f456791d9f7f57b5c99517b6b4e197305c1f10f6
+    Port:          <none>
+    Host Port:     <none>
+    Command:
+      kube-proxy
+      --v=2
+      --config=/var/lib/kube-proxy-config/config
+      --hostname-override=$(NODE_NAME)
+    State:          Running
+      Started:      Fri, 16 Sep 2022 20:22:51 +0000
+    Ready:          True
+    Restart Count:  0
+    Requests:
+      cpu:  100m
+    Environment:
+      NODE_NAME:   (v1:spec.nodeName)
+    Mounts:
+      /lib/modules from lib-modules (ro)
+      /run/xtables.lock from xtables-lock (rw)
+      /var/lib/kube-proxy-config/ from config (rw)
+      /var/lib/kube-proxy/ from kubeconfig (rw)
+      /var/log from varlog (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-mr74v (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  varlog:
+    Type:          HostPath (bare host directory volume)
+    Path:          /var/log
+    HostPathType:
+  xtables-lock:
+    Type:          HostPath (bare host directory volume)
+    Path:          /run/xtables.lock
+    HostPathType:  FileOrCreate
+  lib-modules:
+    Type:          HostPath (bare host directory volume)
+    Path:          /lib/modules
+    HostPathType:
+  kubeconfig:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      kube-proxy
+    Optional:  false
+  config:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      kube-proxy-config
+    Optional:  false
+  kube-api-access-mr74v:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 op=Exists
+                             node.kubernetes.io/disk-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/memory-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/network-unavailable:NoSchedule op=Exists
+                             node.kubernetes.io/not-ready:NoExecute op=Exists
+                             node.kubernetes.io/pid-pressure:NoSchedule op=Exists
+                             node.kubernetes.io/unreachable:NoExecute op=Exists
+                             node.kubernetes.io/unschedulable:NoSchedule op=Exists
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  20m   default-scheduler  Successfully assigned kube-system/kube-proxy-j59xd to ip-10-0-3-61.eu-central-1.compute.internal
+  Normal  Pulling    20m   kubelet            Pulling image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/kube-proxy:v1.22.6-eksbuild.1"
+  Normal  Pulled     19m   kubelet            Successfully pulled image "602401143452.dkr.ecr.eu-central-1.amazonaws.com/eks/kube-proxy:v1.22.6-eksbuild.1" in 6.485908431s
+  Normal  Created    19m   kubelet            Created container kube-proxy
+  Normal  Started    19m   kubelet            Started container kube-proxy

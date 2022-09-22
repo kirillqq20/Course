@@ -1,0 +1,36 @@
+pipeline {
+    agent any
+    stages {
+        stage ('Checkout') {
+            steps {
+                git branch: 'main',
+                    url:'https://github.com/kirillqq20/Course.git'
+            }
+        }
+
+        stage ('Start Apache') {
+            steps {
+                dir ('Lesson12') {
+                    sh 'bash task1.sh'
+                    sh 'sleep 2'
+                }
+            }
+        }
+
+        stage ('Checkout status Apache') {
+            steps {
+                dir ('Lesson12') {
+                    sh 'bash task2.sh'
+                }
+            }
+        }
+
+        stage ('Status Build') {
+            steps {
+                dir ('Lesson12') {
+                    sh 'bash task1.sh'
+                }
+            }
+        }
+    }
+}

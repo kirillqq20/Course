@@ -1,0 +1,192 @@
+{
+  "id": "/subscriptions/9a882a7a-673f-46ce-811f-beed0743423f/resourceGroups/devops_test_rg/providers/Microsoft.Resources/deployments/devopstest222_1660995821365",
+  "name": "devopstest222_1660995821365",
+  "type": "Microsoft.Resources/deployments",
+  "tags": {
+    "primaryResourceId": "/subscriptions/9a882a7a-673f-46ce-811f-beed0743423f/resourcegroups/devops_test_rg/providers/Microsoft.Storage/storageAccounts/devopstest222",
+    "marketplaceItemId": "Microsoft.StorageAccount",
+    "provisioningHash": "Analytics"
+  },
+  "properties": {
+    "templateHash": "5189599486038885774",
+    "parameters": {
+      "location": {
+        "type": "String",
+        "value": "westeurope"
+      },
+      "storageAccountName": {
+        "type": "String",
+        "value": "devopstest222"
+      },
+      "accountType": {
+        "type": "String",
+        "value": "Standard_LRS"
+      },
+      "kind": {
+        "type": "String",
+        "value": "StorageV2"
+      },
+      "accessTier": {
+        "type": "String",
+        "value": "Hot"
+      },
+      "minimumTlsVersion": {
+        "type": "String",
+        "value": "TLS1_1"
+      },
+      "supportsHttpsTrafficOnly": {
+        "type": "Bool",
+        "value": true
+      },
+      "publicNetworkAccess": {
+        "type": "String",
+        "value": "Enabled"
+      },
+      "allowBlobPublicAccess": {
+        "type": "Bool",
+        "value": true
+      },
+      "allowSharedKeyAccess": {
+        "type": "Bool",
+        "value": true
+      },
+      "allowCrossTenantReplication": {
+        "type": "Bool",
+        "value": false
+      },
+      "defaultOAuth": {
+        "type": "Bool",
+        "value": false
+      },
+      "networkAclsBypass": {
+        "type": "String",
+        "value": "AzureServices"
+      },
+      "networkAclsDefaultAction": {
+        "type": "String",
+        "value": "Allow"
+      },
+      "routingChoice": {
+        "type": "String",
+        "value": "InternetRouting"
+      },
+      "dnsEndpointType": {
+        "type": "String",
+        "value": "Standard"
+      },
+      "isHnsEnabled": {
+        "type": "Bool",
+        "value": true
+      },
+      "isSftpEnabled": {
+        "type": "Bool",
+        "value": true
+      },
+      "keySource": {
+        "type": "String",
+        "value": "Microsoft.Storage"
+      },
+      "encryptionEnabled": {
+        "type": "Bool",
+        "value": true
+      },
+      "keyTypeForTableAndQueueEncryption": {
+        "type": "String",
+        "value": "Account"
+      },
+      "infrastructureEncryptionEnabled": {
+        "type": "Bool",
+        "value": false
+      },
+      "isBlobSoftDeleteEnabled": {
+        "type": "Bool",
+        "value": true
+      },
+      "blobSoftDeleteRetentionDays": {
+        "type": "Int",
+        "value": 7
+      },
+      "isContainerSoftDeleteEnabled": {
+        "type": "Bool",
+        "value": true
+      },
+      "containerSoftDeleteRetentionDays": {
+        "type": "Int",
+        "value": 7
+      },
+      "isShareSoftDeleteEnabled": {
+        "type": "Bool",
+        "value": true
+      },
+      "shareSoftDeleteRetentionDays": {
+        "type": "Int",
+        "value": 7
+      }
+    },
+    "mode": "Incremental",
+    "debugSetting": {
+      "detailLevel": "None"
+    },
+    "provisioningState": "Running",
+    "timestamp": "2022-08-20T11:43:42.9735644Z",
+    "duration": "PT4.2278801S",
+    "correlationId": "c33c8d15-936d-495b-a1b1-0a08a07fd76d",
+    "providers": [
+      {
+        "namespace": "Microsoft.Storage",
+        "resourceTypes": [
+          {
+            "resourceType": "storageAccounts",
+            "locations": [
+              "westeurope"
+            ]
+          },
+          {
+            "resourceType": "storageAccounts/blobServices",
+            "locations": [
+              null
+            ]
+          },
+          {
+            "resourceType": "storageAccounts/fileservices",
+            "locations": [
+              null
+            ]
+          }
+        ]
+      }
+    ],
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/9a882a7a-673f-46ce-811f-beed0743423f/resourceGroups/devops_test_rg/providers/Microsoft.Storage/storageAccounts/devopstest222",
+            "resourceType": "Microsoft.Storage/storageAccounts",
+            "resourceName": "devopstest222"
+          }
+        ],
+        "id": "/subscriptions/9a882a7a-673f-46ce-811f-beed0743423f/resourceGroups/devops_test_rg/providers/Microsoft.Storage/storageAccounts/devopstest222/blobServices/default",
+        "resourceType": "Microsoft.Storage/storageAccounts/blobServices",
+        "resourceName": "devopstest222/default"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/9a882a7a-673f-46ce-811f-beed0743423f/resourceGroups/devops_test_rg/providers/Microsoft.Storage/storageAccounts/devopstest222",
+            "resourceType": "Microsoft.Storage/storageAccounts",
+            "resourceName": "devopstest222"
+          },
+          {
+            "id": "/subscriptions/9a882a7a-673f-46ce-811f-beed0743423f/resourceGroups/devops_test_rg/providers/Microsoft.Storage/storageAccounts/devopstest222/blobServices/default",
+            "resourceType": "Microsoft.Storage/storageAccounts/blobServices",
+            "resourceName": "devopstest222/default"
+          }
+        ],
+        "id": "/subscriptions/9a882a7a-673f-46ce-811f-beed0743423f/resourceGroups/devops_test_rg/providers/Microsoft.Storage/storageAccounts/devopstest222/fileservices/default",
+        "resourceType": "Microsoft.Storage/storageAccounts/fileservices",
+        "resourceName": "devopstest222/default"
+      }
+    ],
+    "validationLevel": "Template"
+  }
+}

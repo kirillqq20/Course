@@ -1,0 +1,760 @@
+{
+    "_id" : ObjectId("52cdef7c4bab8bd67529830a"),
+    "name" : "Fluc",
+    "permalink" : "fluc",
+    "crunchbase_url" : "http://www.crunchbase.com/company/fluc",
+    "homepage_url" : "http://www.fluc.com",
+    "blog_url" : "http://www.fluc.com",
+    "blog_feed_url" : "http://www.fluc.com",
+    "twitter_username" : "letsfluc",
+    "category_code" : "hospitality",
+    "number_of_employees" : NumberInt(3),
+    "founded_year" : NumberInt(2013),
+    "founded_month" : NumberInt(1),
+    "founded_day" : null,
+    "deadpooled_year" : null,
+    "deadpooled_month" : null,
+    "deadpooled_day" : null,
+    "deadpooled_url" : null,
+    "tag_list" : "consumer-web",
+    "alias_list" : "",
+    "email_address" : "hello@fluc.com",
+    "phone_number" : "",
+    "description" : "Your Favorite Food. Delivered Instantly.",
+    "created_at" : "Sun Feb 17 01:05:59 UTC 2008",
+    "updated_at" : "Fri Sep 27 17:56:00 UTC 2013",
+    "overview" : "<p>Your Favorite Food. Delivered Instantly.</p>",
+    "image" : {
+        "available_sizes" : [
+            [
+                [
+                    NumberInt(150),
+                    NumberInt(150)
+                ],
+                "assets/images/resized/0001/2509/12509v10-max-150x150.png"
+            ],
+            [
+                [
+                    NumberInt(180),
+                    NumberInt(180)
+                ],
+                "assets/images/resized/0001/2509/12509v10-max-250x250.png"
+            ],
+            [
+                [
+                    NumberInt(180),
+                    NumberInt(180)
+                ],
+                "assets/images/resized/0001/2509/12509v10-max-450x450.png"
+            ]
+        ],
+        "attribution" : null
+    },
+    "products" : [
+
+    ],
+    "relationships" : [
+        {
+            "is_past" : false,
+            "title" : "Co-Founder",
+            "person" : {
+                "first_name" : "Pako",
+                "last_name" : "Magdaleno",
+                "permalink" : "pako-magdaleno"
+            }
+        },
+        {
+            "is_past" : false,
+            "title" : "Co-Founder",
+            "person" : {
+                "first_name" : "Tim",
+                "last_name" : "Davis",
+                "permalink" : "tim-davis"
+            }
+        },
+        {
+            "is_past" : false,
+            "title" : "Co-Founder",
+            "person" : {
+                "first_name" : "Adam",
+                "last_name" : "Ahmad",
+                "permalink" : "adam-ahmad"
+            }
+        }
+    ],
+    "competitions" : [
+
+    ],
+    "providerships" : [
+
+    ],
+    "total_money_raised" : "$0",
+    "funding_rounds" : [
+
+    ],
+    "investments" : [
+
+    ],
+    "acquisition" : null,
+    "acquisitions" : [
+
+    ],
+    "offices" : [
+        {
+            "description" : "",
+            "address1" : "1259 El Camino Real",
+            "address2" : "",
+            "zip_code" : "94025",
+            "city" : "Menlo Park",
+            "state_code" : "CA",
+            "country_code" : "USA",
+            "latitude" : 37.454701,
+            "longitude" : -122.1853756
+        }
+    ],
+    "milestones" : [
+
+    ],
+    "ipo" : null,
+    "video_embeds" : [
+        {
+            "embed_code" : "<iframe src=\"http://player.vimeo.com/video/67471748?byline=0&amp;portrait=0\" width=\"430\" height=\"242\" frameborder=\"0\" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href=\"http://vimeo.com/67471748\">Welcome</a> from <a href=\"http://vimeo.com/user18678409\">Fluc</a> on <a href=\"http://vimeo.com\">Vimeo</a>.</p>",
+            "description" : "<p>Fluc</p>"
+        }
+    ],
+    "screenshots" : [
+
+    ],
+    "external_links" : [
+
+    ],
+    "partners" : [
+
+    ]
+}
+{
+    "_id" : ObjectId("52cdef7d4bab8bd675298fe1"),
+    "name" : "Gimigo",
+    "permalink" : "gimigo",
+    "crunchbase_url" : "http://www.crunchbase.com/company/gimigo",
+    "homepage_url" : "http://www.gimigo.com",
+    "blog_url" : "",
+    "blog_feed_url" : "",
+    "twitter_username" : "gimigo",
+    "category_code" : "analytics",
+    "number_of_employees" : NumberInt(4),
+    "founded_year" : NumberInt(2013),
+    "founded_month" : null,
+    "founded_day" : null,
+    "deadpooled_year" : null,
+    "deadpooled_month" : null,
+    "deadpooled_day" : null,
+    "deadpooled_url" : null,
+    "tag_list" : "gimigo, contact-information, personal-information, contacts, personal, relationships, current, update, updated, up-to-date, real-time, live, address-book, database, phone, customer-relationship-management, crm, relationship-management, engagement",
+    "alias_list" : null,
+    "email_address" : "info@gimigo.com",
+    "phone_number" : "(206) 538-2800",
+    "description" : "Click. Change. Done.™",
+    "created_at" : "Fri Jun 27 19:06:42 UTC 2008",
+    "updated_at" : "Mon Oct 14 22:52:20 UTC 2013",
+    "overview" : "<p>Email, phone, address, credit/bank cards, and more — who has it and what happens when it changes? It&#8217;s impossible to keep it current across hundreds of mobile phones, apps and databases. So we set out to solve this massive problem.</p>\n\n<p>Gimigo:</p>\n\n<p>1) Lets you know who has your email, phone, address, credit/bank cards, and more.</p>\n\n<p>2) Lets you change your old info with the new info — and you decide who gets the new info. Gimigo takes care of updating your relationships so you don&#8217;t have to!</p>\n\n<p>We&#8217;re patents-pending and rolling out Gimigo in 2013. Many thanks to family, friends, investors and Gimigo&#8217;ers. Their generous time, support and encouragement makes <a href=\"https://www.gimigo.com\" title=\"Gimigo\" rel=\"nofollow\">Gimigo</a> possible.</p>",
+    "image" : {
+        "available_sizes" : [
+            [
+                [
+                    NumberInt(150),
+                    NumberInt(150)
+                ],
+                "assets/images/resized/0002/1165/21165v7-max-150x150.png"
+            ],
+            [
+                [
+                    NumberInt(250),
+                    NumberInt(250)
+                ],
+                "assets/images/resized/0002/1165/21165v7-max-250x250.png"
+            ],
+            [
+                [
+                    NumberInt(256),
+                    NumberInt(256)
+                ],
+                "assets/images/resized/0002/1165/21165v7-max-450x450.png"
+            ]
+        ],
+        "attribution" : null
+    },
+    "products" : [
+
+    ],
+    "relationships" : [
+
+    ],
+    "competitions" : [
+
+    ],
+    "providerships" : [
+
+    ],
+    "total_money_raised" : "$0",
+    "funding_rounds" : [
+
+    ],
+    "investments" : [
+
+    ],
+    "acquisition" : null,
+    "acquisitions" : [
+
+    ],
+    "offices" : [
+        {
+            "description" : "",
+            "address1" : "2226 Eastlake Ave E # 117",
+            "address2" : "",
+            "zip_code" : "98102",
+            "city" : "Seattle",
+            "state_code" : "WA",
+            "country_code" : "USA",
+            "latitude" : 44.859587,
+            "longitude" : -93.226503
+        }
+    ],
+    "milestones" : [
+        {
+            "id" : NumberInt(10535),
+            "description" : "Gimigo on TV!",
+            "stoned_year" : NumberInt(2008),
+            "stoned_month" : NumberInt(11),
+            "stoned_day" : NumberInt(11),
+            "source_url" : "http://blog.gimigo.com/2008/11/11/gimigo-on-tv/",
+            "source_text" : null,
+            "source_description" : "Gimigo on TV!",
+            "stoneable_type" : "Company",
+            "stoned_value" : null,
+            "stoned_value_type" : null,
+            "stoned_acquirer" : null,
+            "stoneable" : {
+                "name" : "Gimigo",
+                "permalink" : "gimigo"
+            }
+        },
+        {
+            "id" : NumberInt(10536),
+            "description" : "Happy holidays to more than 250,000 Gimigo amigoâ€™s worldwide",
+            "stoned_year" : NumberInt(2009),
+            "stoned_month" : NumberInt(12),
+            "stoned_day" : NumberInt(15),
+            "source_url" : "http://blog.gimigo.com/2009/12/15/happy-holidays-from-gimigo/",
+            "source_text" : null,
+            "source_description" : "Happy holidays to more than 250,000 Gimigo amigoâ€™s worldwide",
+            "stoneable_type" : "Company",
+            "stoned_value" : null,
+            "stoned_value_type" : null,
+            "stoned_acquirer" : null,
+            "stoneable" : {
+                "name" : "Gimigo",
+                "permalink" : "gimigo"
+            }
+        },
+        {
+            "id" : NumberInt(10537),
+            "description" : "Gimigo is a TiE20 Industry Awards Winner",
+            "stoned_year" : NumberInt(2011),
+            "stoned_month" : NumberInt(10),
+            "stoned_day" : NumberInt(26),
+            "source_url" : "http://blog.gimigo.com/2010/10/26/gimigo-is-a-tie20-industry-awards-winner/",
+            "source_text" : null,
+            "source_description" : "Gimigo is a TiE20 Industry Awards Winner",
+            "stoneable_type" : "Company",
+            "stoned_value" : null,
+            "stoned_value_type" : null,
+            "stoned_acquirer" : null,
+            "stoneable" : {
+                "name" : "Gimigo",
+                "permalink" : "gimigo"
+            }
+        }
+    ],
+    "ipo" : null,
+    "video_embeds" : [
+        {
+            "embed_code" : "<iframe title=\"Gimigo - Update your information quickly\" width=\"480\" height=\"300\" src=\"http://www.youtube.com/embed/GcXCBmRrVwo?rel=0&hd=1&autohide=1&showinfo=0\" frameborder=\"0\" allowfullscreen></iframe>",
+            "description" : ""
+        }
+    ],
+    "screenshots" : [
+
+    ],
+    "external_links" : [
+
+    ],
+    "partners" : [
+
+    ]
+}
+{
+    "_id" : ObjectId("52cdef7d4bab8bd675299291"),
+    "name" : "SEOGroup",
+    "permalink" : "seogroup",
+    "crunchbase_url" : "http://www.crunchbase.com/company/seogroup",
+    "homepage_url" : "http://seogroup.com",
+    "blog_url" : "http://blog.seogroup.com",
+    "blog_feed_url" : "http://feeds.feedburner.com/seogroup-blog",
+    "twitter_username" : "seogroup",
+    "category_code" : "advertising",
+    "number_of_employees" : NumberInt(3),
+    "founded_year" : NumberInt(2013),
+    "founded_month" : NumberInt(4),
+    "founded_day" : NumberInt(1),
+    "deadpooled_year" : null,
+    "deadpooled_month" : null,
+    "deadpooled_day" : null,
+    "deadpooled_url" : null,
+    "tag_list" : "seo, chicago, search-engine-optimization",
+    "alias_list" : "",
+    "email_address" : "marvin@seogroup.com",
+    "phone_number" : "773-614-7737",
+    "description" : "Search Engine Optimization",
+    "created_at" : "Thu Jul 17 15:19:35 UTC 2008",
+    "updated_at" : "Mon Nov 18 11:28:08 UTC 2013",
+    "overview" : "<p>SEOGroup is a search engine optimization company and a search engine marketing company based in Chicago, IL.  This SEO company performs both on-site and off-site optimization and marketing techniques, as well as performance tracking, blogging, link-building, and more.</p>",
+    "image" : {
+        "available_sizes" : [
+            [
+                [
+                    NumberInt(95),
+                    NumberInt(29)
+                ],
+                "assets/images/resized/0002/2262/22262v2-max-150x150.png"
+            ],
+            [
+                [
+                    NumberInt(95),
+                    NumberInt(29)
+                ],
+                "assets/images/resized/0002/2262/22262v2-max-250x250.png"
+            ],
+            [
+                [
+                    NumberInt(95),
+                    NumberInt(29)
+                ],
+                "assets/images/resized/0002/2262/22262v2-max-450x450.png"
+            ]
+        ],
+        "attribution" : null
+    },
+    "products" : [
+
+    ],
+    "relationships" : [
+        {
+            "is_past" : false,
+            "title" : "Vice President",
+            "person" : {
+                "first_name" : "Jason",
+                "last_name" : "Saul",
+                "permalink" : "jason-saul"
+            }
+        },
+        {
+            "is_past" : false,
+            "title" : "President",
+            "person" : {
+                "first_name" : "Marvin",
+                "last_name" : "Russell",
+                "permalink" : "marvin-russell-2"
+            }
+        }
+    ],
+    "competitions" : [
+
+    ],
+    "providerships" : [
+
+    ],
+    "total_money_raised" : "$0",
+    "funding_rounds" : [
+
+    ],
+    "investments" : [
+
+    ],
+    "acquisition" : null,
+    "acquisitions" : [
+
+    ],
+    "offices" : [
+        {
+            "description" : "Corporate Headquarter",
+            "address1" : "200 North Michigan Ave",
+            "address2" : "Suite 500",
+            "zip_code" : "60601",
+            "city" : "Chicago",
+            "state_code" : "IL",
+            "country_code" : "USA",
+            "latitude" : 41.886264,
+            "longitude" : -87.624701
+        }
+    ],
+    "milestones" : [
+
+    ],
+    "ipo" : null,
+    "video_embeds" : [
+
+    ],
+    "screenshots" : [
+        {
+            "available_sizes" : [
+                [
+                    [
+                        NumberInt(150),
+                        NumberInt(142)
+                    ],
+                    "assets/images/resized/0002/8405/28405v2-max-150x150.png"
+                ],
+                [
+                    [
+                        NumberInt(250),
+                        NumberInt(236)
+                    ],
+                    "assets/images/resized/0002/8405/28405v2-max-250x250.png"
+                ],
+                [
+                    [
+                        NumberInt(450),
+                        NumberInt(426)
+                    ],
+                    "assets/images/resized/0002/8405/28405v2-max-450x450.png"
+                ]
+            ],
+            "attribution" : null
+        }
+    ],
+    "external_links" : [
+        {
+            "external_url" : "http://seogroup.com/evaluation/",
+            "title" : "SEO Evaluation Tool"
+        },
+        {
+            "external_url" : "http://twitter.com/seogroup",
+            "title" : "SEO Group Twitter"
+        }
+    ],
+    "partners" : [
+
+    ]
+}
+{
+    "_id" : ObjectId("52cdef7e4bab8bd67529b254"),
+    "name" : "Pikk",
+    "permalink" : "pikk",
+    "crunchbase_url" : "http://www.crunchbase.com/company/pikk",
+    "homepage_url" : "http://www.pikk.com",
+    "blog_url" : "",
+    "blog_feed_url" : "",
+    "twitter_username" : "",
+    "category_code" : "photo_video",
+    "number_of_employees" : NumberInt(2),
+    "founded_year" : NumberInt(2013),
+    "founded_month" : NumberInt(9),
+    "founded_day" : null,
+    "deadpooled_year" : null,
+    "deadpooled_month" : null,
+    "deadpooled_day" : null,
+    "deadpooled_url" : null,
+    "tag_list" : "polling, social-networking, news-aggregation, blog-aggregation, social-polling, web-2-0",
+    "alias_list" : "",
+    "email_address" : "",
+    "phone_number" : "",
+    "description" : "One click photo sharing app",
+    "created_at" : "Sun Mar 01 18:39:34 UTC 2009",
+    "updated_at" : "Tue Sep 03 22:35:20 UTC 2013",
+    "overview" : "<p>Pikk is a one click photo sharing app.</p>",
+    "image" : {
+        "available_sizes" : [
+            [
+                [
+                    NumberInt(150),
+                    NumberInt(47)
+                ],
+                "assets/images/resized/0003/7146/37146v3-max-150x150.jpg"
+            ],
+            [
+                [
+                    NumberInt(250),
+                    NumberInt(78)
+                ],
+                "assets/images/resized/0003/7146/37146v3-max-250x250.jpg"
+            ],
+            [
+                [
+                    NumberInt(285),
+                    NumberInt(90)
+                ],
+                "assets/images/resized/0003/7146/37146v3-max-450x450.jpg"
+            ]
+        ],
+        "attribution" : null
+    },
+    "products" : [
+
+    ],
+    "relationships" : [
+        {
+            "is_past" : false,
+            "title" : "CEO and Founder",
+            "person" : {
+                "first_name" : "Kevin",
+                "last_name" : "Chugh",
+                "permalink" : "kevin-chugh"
+            }
+        },
+        {
+            "is_past" : false,
+            "title" : "Executive Vice President, Product Development",
+            "person" : {
+                "first_name" : "Rick",
+                "last_name" : "Harrington",
+                "permalink" : "rick-harrington"
+            }
+        }
+    ],
+    "competitions" : [
+        {
+            "competitor" : {
+                "name" : "Instagram",
+                "permalink" : "instagram"
+            }
+        },
+        {
+            "competitor" : {
+                "name" : "Snapchat",
+                "permalink" : "snapchat"
+            }
+        }
+    ],
+    "providerships" : [
+
+    ],
+    "total_money_raised" : "$0",
+    "funding_rounds" : [
+
+    ],
+    "investments" : [
+
+    ],
+    "acquisition" : null,
+    "acquisitions" : [
+
+    ],
+    "offices" : [
+
+    ],
+    "milestones" : [
+
+    ],
+    "ipo" : null,
+    "video_embeds" : [
+
+    ],
+    "screenshots" : [
+        {
+            "available_sizes" : [
+                [
+                    [
+                        NumberInt(150),
+                        NumberInt(93)
+                    ],
+                    "assets/images/resized/0006/5772/65772v2-max-150x150.png"
+                ],
+                [
+                    [
+                        NumberInt(250),
+                        NumberInt(156)
+                    ],
+                    "assets/images/resized/0006/5772/65772v2-max-250x250.png"
+                ],
+                [
+                    [
+                        NumberInt(450),
+                        NumberInt(281)
+                    ],
+                    "assets/images/resized/0006/5772/65772v2-max-450x450.png"
+                ]
+            ],
+            "attribution" : null
+        }
+    ],
+    "external_links" : [
+
+    ],
+    "partners" : [
+
+    ]
+}
+{
+    "_id" : ObjectId("52cdef7e4bab8bd67529b7cf"),
+    "name" : "Shopseen",
+    "permalink" : "shopseen",
+    "crunchbase_url" : "http://www.crunchbase.com/company/shopseen",
+    "homepage_url" : "http://www.shopseen.com",
+    "blog_url" : "http://blog.shopseen.com",
+    "blog_feed_url" : "http://blog.shopseen.com/feed/",
+    "twitter_username" : "shopseen",
+    "category_code" : "ecommerce",
+    "number_of_employees" : NumberInt(2),
+    "founded_year" : NumberInt(2013),
+    "founded_month" : null,
+    "founded_day" : null,
+    "deadpooled_year" : null,
+    "deadpooled_month" : null,
+    "deadpooled_day" : null,
+    "deadpooled_url" : "",
+    "tag_list" : "shopping, ecommerce, brick-and-mortar, retail, small-business",
+    "alias_list" : "",
+    "email_address" : "hello@shopseen.com",
+    "phone_number" : "",
+    "description" : "Sell better.",
+    "created_at" : "Sat Apr 18 19:52:26 UTC 2009",
+    "updated_at" : "Thu Dec 05 09:03:11 UTC 2013",
+    "overview" : "<p>Shopseen a modern workflow to help merchants and sellers sell better.</p>\n\n<p>The platform gives small businesses a workflow to sell more in a scalable way and, as a result, scale their businesses:</p>\n\n<ul>\n<li>Sell more by reaching more people through social and paid media.</li>\n<li>Sell efficiently with a streamlined workflow - no copy/pasting, just add, post, and ship.</li>\n<li>Sell scalably with automated inventory management and syncing with other marketplaces</li>\n<li>Sell from anywhere with a mobile and tablet friendly UI</li>\n</ul>",
+    "image" : {
+        "available_sizes" : [
+            [
+                [
+                    NumberInt(150),
+                    NumberInt(18)
+                ],
+                "assets/images/resized/0004/1863/41863v7-max-150x150.png"
+            ],
+            [
+                [
+                    NumberInt(250),
+                    NumberInt(31)
+                ],
+                "assets/images/resized/0004/1863/41863v7-max-250x250.png"
+            ],
+            [
+                [
+                    NumberInt(255),
+                    NumberInt(32)
+                ],
+                "assets/images/resized/0004/1863/41863v7-max-450x450.png"
+            ]
+        ],
+        "attribution" : null
+    },
+    "products" : [
+
+    ],
+    "relationships" : [
+        {
+            "is_past" : false,
+            "title" : "CEO",
+            "person" : {
+                "first_name" : "Adeel",
+                "last_name" : "Ahmad",
+                "permalink" : "adeel-ahmad"
+            }
+        },
+        {
+            "is_past" : false,
+            "title" : "COO & Co-Founder",
+            "person" : {
+                "first_name" : "Aakash",
+                "last_name" : "Desai",
+                "permalink" : "aakash-desai"
+            }
+        }
+    ],
+    "competitions" : [
+
+    ],
+    "providerships" : [
+
+    ],
+    "total_money_raised" : "$0",
+    "funding_rounds" : [
+
+    ],
+    "investments" : [
+
+    ],
+    "acquisition" : null,
+    "acquisitions" : [
+
+    ],
+    "offices" : [
+        {
+            "description" : "Office",
+            "address1" : "",
+            "address2" : "",
+            "zip_code" : "94103",
+            "city" : "San Francisco",
+            "state_code" : "CA",
+            "country_code" : "USA",
+            "latitude" : 37.772323,
+            "longitude" : -122.214897
+        }
+    ],
+    "milestones" : [
+
+    ],
+    "ipo" : null,
+    "video_embeds" : [
+
+    ],
+    "screenshots" : [
+        {
+            "available_sizes" : [
+                [
+                    [
+                        NumberInt(150),
+                        NumberInt(74)
+                    ],
+                    "assets/images/resized/0037/0891/370891v1-max-150x150.png"
+                ],
+                [
+                    [
+                        NumberInt(250),
+                        NumberInt(124)
+                    ],
+                    "assets/images/resized/0037/0891/370891v1-max-250x250.png"
+                ],
+                [
+                    [
+                        NumberInt(450),
+                        NumberInt(223)
+                    ],
+                    "assets/images/resized/0037/0891/370891v1-max-450x450.png"
+                ]
+            ],
+            "attribution" : null
+        }
+    ],
+    "external_links" : [
+        {
+            "external_url" : "http://techcrunch.com/2013/10/29/500-startups-accelerator-batch-7/",
+            "title" : "500 Startups Accelerator Batch 7 Begins"
+        },
+        {
+            "external_url" : "http://sf.racked.com/archives/2013/10/28/san-franciscobased-pinterest-may-be.php",
+            "title" : "5 SF-Based, Under the Radar Style Apps to Download Now"
+        }
+    ],
+    "partners" : [
+        {
+            "partner_name" : "AngelList",
+            "homepage_url" : "http://shopseen.com",
+            "link_1_url" : "https://angel.co/shopseen?utm_source=crunchbase&utm_medium=link&utm_content=profile&utm_term=shopseen&utm_campaign=crunchbase",
+            "link_2_url" : "https://angel.co/shopseen/jobs?utc_source=crunchbase&amp;utm_campaign=crunchbase&amp;utm_content=jobs&amp;utm_medium=link&amp;utm_term=shopseen",
+            "link_3_url" : null,
+            "link_1_name" : "AngelList Page",
+            "link_2_name" : "Hiring: Ruby on Rails Engineer",
+            "link_3_name" : null
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "EbsOptimized": false,
+    "BlockDeviceMappings": [
+        {
+            "DeviceName": "/dev/xvda",
+            "Ebs": {
+                "Encrypted": false,
+                "DeleteOnTermination": true,
+                "SnapshotId": "snap-0b1e0b58f54fc89ef",
+                "VolumeSize": 8,
+                "VolumeType": "gp2"
+            }
+        },
+        {
+            "DeviceName": "/dev/sdb",
+            "Ebs": {
+                "Encrypted": false,
+                "DeleteOnTermination": true,
+                "SnapshotId": "",
+                "VolumeSize": 8,
+                "VolumeType": "gp3",
+                "Throughput": 125
+            }
+        }
+    ],
+    "NetworkInterfaces": [
+        {
+            "AssociatePublicIpAddress": true,
+            "DeleteOnTermination": true,
+            "Description": "",
+            "DeviceIndex": 0,
+            "Groups": [
+                "sg-0cd507446fb8d99c8"
+            ],
+            "InterfaceType": "interface",
+            "Ipv6Addresses": [],
+            "PrivateIpAddresses": [
+                {
+                    "Primary": true,
+                    "PrivateIpAddress": "172.31.37.110"
+                }
+            ],
+            "SubnetId": "subnet-0bf5d3be1d00c1b3d",
+            "NetworkCardIndex": 0
+        }
+    ],
+    "ImageId": "ami-09e2d756e7d78558d",
+    "InstanceType": "t2.micro",
+    "KeyName": "ireland_serv",
+    "Monitoring": {
+        "Enabled": false
+    },
+    "Placement": {
+        "AvailabilityZone": "eu-west-1a",
+        "GroupName": "",
+        "Tenancy": "default"
+    },
+    "DisableApiTermination": false,
+    "InstanceInitiatedShutdownBehavior": "stop",
+    "TagSpecifications": [
+        {
+            "ResourceType": "instance",
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "devops-test-kir"
+                }
+            ]
+        }
+    ],
+    "CreditSpecification": {
+        "CpuCredits": "standard"
+    },
+    "CpuOptions": {
+        "CoreCount": 1,
+        "ThreadsPerCore": 1
+    },
+    "CapacityReservationSpecification": {
+        "CapacityReservationPreference": "open"
+    },
+    "HibernationOptions": {
+        "Configured": false
+    },
+    "MetadataOptions": {
+        "HttpTokens": "optional",
+        "HttpPutResponseHopLimit": 1,
+        "HttpEndpoint": "enabled",
+        "HttpProtocolIpv6": "disabled",
+        "InstanceMetadataTags": "disabled"
+    },
+    "EnclaveOptions": {
+        "Enabled": false
+    },
+    "PrivateDnsNameOptions": {
+        "HostnameType": "ip-name",
+        "EnableResourceNameDnsARecord": true,
+        "EnableResourceNameDnsAAAARecord": false
+    },
+    "MaintenanceOptions": {
+        "AutoRecovery": "default"
+    },
+    "DisableApiStop": false
+}
