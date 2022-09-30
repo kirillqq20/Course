@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+    tools {
+        terraform 'terraform'
+    }
+
+    stages {
+       
+       stage ('Git checkout') {
+            steps {
+                git branch: 'main', credentialsId: 'kirill_git', url: 'https://github.com/kirillqq20/Diploma.git'
+            }
+        }
+        stage ('login azure') {
+            steps {
+               sh 'az login'
+            }
+        }
+         stage ('terraform init') {
+            steps {
+                sh 'terraform init'
+            }
+        }
+        stage ('terraform apply') {
+            steps {
+                sh 'terraform apply --auto-approve'
+            }
+        }
+        stage ('insert data') {
+            steps {
+                sh 'mysql --host=kir-mysqlserver.mysql.database.azure.com --user=mysqladminun@*** --password=*** kirkirdb < ./aero_mysql_script.sql'
+            }
+        }
+        stage ('start grafana') {
+            steps {
+                sh 'docker start grafana '
+            }
+        }
+    }
+}
