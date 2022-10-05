@@ -1,0 +1,1 @@
+[{"name": "Andrey", "years": "24", "games": ["gta", "withes", "formula"]}, {"name": "Egor", "years": "24", "games": ["heartstone", "dota2", "civilization"]}]
